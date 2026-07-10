@@ -1,14 +1,10 @@
-import Navbar from "./components/Navbar";
-
 function App() {
   return (
-    <>
-      <Navbar />
-
-      <main>
-        <h1>Premium websites powered by AI.</h1>
-      </main>
-    </>
+    <main className="min-h-screen flex items-center justify-center bg-black">
+      <h1 className="text-5xl font-bold text-white">
+        Abril Digital Co.
+      </h1>
+    </main>
   );
 }
 
