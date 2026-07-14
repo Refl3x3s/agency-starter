@@ -1,11 +1,16 @@
+import Navbar from "./components/layout/Navbar";
+import Hero from "./sections/Hero";
+import Services from "./sections/Services";
+
 function App() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-black">
-      <h1 className="text-5xl font-bold text-white">
-        Abril Digital Co.
-      </h1>
-    </main>
+    <>
+      <Navbar />
+      <Hero />
+      <Services />
+    </>
   );
 }
 
 export default App;
+
