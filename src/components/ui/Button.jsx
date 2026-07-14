@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
 function Button({
   children,
   variant = "primary",
   href,
+  to,
   className = "",
   ...props
 }) {
@@ -30,6 +33,14 @@ function Button({
     ${variants[variant]}
     ${className}
   `;
+
+  if (to) {
+    return (
+      <Link to={to} className={classes} {...props}>
+        {children}
+      </Link>
+    );
+  }
 
   if (href) {
     return (

@@ -4,7 +4,9 @@ import Heading from "../components/ui/Heading";
 import Badge from "../components/ui/Badge";
 import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
+import IncludedItem from "../components/ui/IncludedItem";
 import pricing from "../data/pricing";
+import included from "../data/included";
 import { whatsappLink, buildWhatsappLink } from "../data/contact";
 
 function Pricing() {
@@ -15,9 +17,28 @@ function Pricing() {
           as="h2"
           badge={<Badge>Precios</Badge>}
           title="Elige la forma que mejor se adapte a tu negocio"
-          description="No todos los negocios tienen las mismas necesidades. Por eso ofrecemos tres formas de empezar."
+          description="No vendemos solo una página web: nos encargamos de tu presencia digital completa, para que tú te concentres en tu negocio."
           align="center"
         />
+
+        <div className="mx-auto mt-16 max-w-4xl rounded-3xl border border-blue-100 bg-white p-8 shadow-sm md:p-10">
+          <div className="flex flex-col items-center gap-2 text-center">
+            <Badge>Todo incluido</Badge>
+            <h3 className="mt-2 text-2xl font-semibold tracking-tight text-stone-900">
+              Esto va incluido en cada plan, sin letra pequeña
+            </h3>
+            <p className="max-w-xl leading-7 text-stone-600">
+              Nos encargamos de toda la parte técnica: diseño, alojamiento,
+              seguridad y mantenimiento continuo.
+            </p>
+          </div>
+
+          <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+            {included.map((item) => (
+              <IncludedItem key={item} title={item} />
+            ))}
+          </ul>
+        </div>
 
         <div className="mt-16 grid items-start gap-8 lg:grid-cols-3">
           {pricing.map((plan) => (
@@ -67,7 +88,11 @@ function Pricing() {
                 {plan.description}
               </p>
 
-              <ul className="mt-6 flex flex-col gap-3 border-t border-stone-100 pt-6">
+              <p className="mt-6 border-t border-stone-100 pt-6 text-xs font-semibold uppercase tracking-wide text-stone-400">
+                Además de todo lo esencial
+              </p>
+
+              <ul className="mt-3 flex flex-col gap-3">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <span className="mt-0.5 font-semibold text-blue-600">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import { whatsappLink } from "../../data/contact";
@@ -9,19 +10,19 @@ function Navbar() {
         <div className="flex items-center justify-between gap-4 py-5">
 
           {/* Logo */}
-          <a
-            href="/"
+          <Link
+            to="/"
             className="shrink-0 text-lg font-bold tracking-tight text-white sm:text-2xl"
           >
             Abril Digital Co.
-          </a>
+          </Link>
 
           {/* Navegación */}
           <nav aria-label="Navegación principal">
             <ul className="hidden items-center gap-8 text-sm font-medium text-neutral-300 lg:flex">
               <li>
                 <a
-                  href="#servicios"
+                  href="/#servicios"
                   className="transition-colors hover:text-white"
                 >
                   Servicios
@@ -29,17 +30,17 @@ function Navbar() {
               </li>
 
               <li>
-                <a
-                  href="#proyectos"
+                <Link
+                  to="/proyectos"
                   className="transition-colors hover:text-white"
                 >
                   Proyectos
-                </a>
+                </Link>
               </li>
 
               <li>
                 <a
-                  href="#proceso"
+                  href="/#proceso"
                   className="transition-colors hover:text-white"
                 >
                   Proceso
@@ -48,7 +49,7 @@ function Navbar() {
 
               <li>
                 <a
-                  href="#precios"
+                  href="/#precios"
                   className="transition-colors hover:text-white"
                 >
                   Precios
@@ -57,7 +58,7 @@ function Navbar() {
 
               <li>
                 <a
-                  href="#contacto"
+                  href="/#contacto"
                   className="transition-colors hover:text-white"
                 >
                   Contacto

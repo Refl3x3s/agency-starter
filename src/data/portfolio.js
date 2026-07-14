@@ -31,6 +31,7 @@ const portfolio = [
   {
     id: "acr-sport-fitness",
     name: "ACR Sport & Fitness",
+    featured: true,
     heroImage: acrHero,
     heroAlt: "Página web de ACR Sport & Fitness",
     heroWidth: 1280,
