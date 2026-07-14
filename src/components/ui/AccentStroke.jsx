@@ -20,6 +20,16 @@ export default function AccentStroke({
             strokeWidth="3"
             strokeLinecap="round"
           />
+
+          {/* Traveling shine highlight along the same path */}
+          <path
+            d="M-150 190 C 20 140 120 260 300 230 C 460 205 480 340 340 420 C 230 480 200 560 380 600 C 560 645 680 700 820 780 C 950 830 1100 860 1250 850 C 1400 840 1480 830 1560 780 C 1620 745 1660 660 1760 560"
+            stroke="currentColor"
+            strokeWidth="4"
+            strokeLinecap="round"
+            pathLength="100"
+            className="accent-stroke-shine"
+          />
         </svg>
       </div>
     );

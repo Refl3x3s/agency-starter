@@ -1,1 +1,46 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+.accent-stroke-shine {
+  stroke-dasharray: 6 94;
+  stroke-dashoffset: 0;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 6px currentColor);
+  animation: accent-shine 6s linear infinite;
+}
+
+@keyframes accent-shine {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accent-stroke-shine {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  top: -3rem;
+  left: 1rem;
+  z-index: 100;
+  border-radius: 0.5rem;
+  background: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}

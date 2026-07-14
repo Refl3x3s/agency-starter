@@ -13,6 +13,9 @@ function ServiceCard({
           p-8
           transition-all
           duration-300
+          hover:-translate-y-1
+          hover:border-blue-200
+          hover:shadow-lg
         "
       >
         <p className="text-sm font-medium text-blue-600">

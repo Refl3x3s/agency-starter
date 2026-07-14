@@ -1,10 +1,11 @@
 import Section from "../components/ui/Section";
-import Container from "../components/UI/Container";
+import Container from "../components/ui/Container";
 import Heading from "../components/ui/Heading";
 import Badge from "../components/ui/Badge";
 import Button from "../components/ui/Button";
 import MockupCard from "./MockupCard";
 import AccentStroke from "../components/ui/AccentStroke";
+import { whatsappLink } from "../data/contact";
 
 function Hero() {
   return (
@@ -35,7 +36,12 @@ function Hero() {
               />
 
               <div className="mt-10">
-                <Button>
+                <Button
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Hablemos de tu negocio por WhatsApp (se abre en una pestaña nueva)"
+                >
                   Hablemos de tu negocio
                 </Button>
               </div>

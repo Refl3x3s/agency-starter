@@ -1,5 +1,5 @@
 import Button from "../components/ui/Button";
-import coffeeHero from "../assets/images/portfolio/coffee-hero.png";
+import coffeeHero from "../assets/images/portfolio/coffee-hero.jpg";
 
 function MiniHero({
   title = "Café Aurora",
@@ -17,13 +17,13 @@ function MiniHero({
       <div className="absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-sky-200/30 blur-3xl" />
 
       {/* Navbar */}
-      <div className="relative flex items-center justify-between border-b border-neutral-100 px-5 py-3">
+      <div className="relative flex items-center justify-between gap-3 border-b border-neutral-100 px-5 py-3">
 
-        <div className="font-semibold text-neutral-800">
+        <div className="min-w-0 flex-1 truncate font-semibold text-neutral-800">
           {title}
         </div>
 
-        <div className="flex gap-4 text-xs text-neutral-500">
+        <div className="flex shrink-0 gap-4 text-xs text-neutral-500">
           <span>Inicio</span>
           <span>Menú</span>
           <span>Contacto</span>
@@ -59,8 +59,13 @@ function MiniHero({
 
   <img
     src={coffeeHero}
-    alt="Café Aurora"
+    alt="Vista previa de una página web de ejemplo para Café Aurora"
     className="h-56 w-full rounded-2xl object-cover shadow-xl"
+    width={1535}
+    height={1024}
+    loading="eager"
+    fetchPriority="high"
+    decoding="async"
   />
 
 </div>

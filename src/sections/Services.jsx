@@ -1,5 +1,5 @@
 import Section from "../components/ui/Section";
-import Container from "../components/UI/Container";
+import Container from "../components/ui/Container";
 import Heading from "../components/ui/Heading";
 import ServiceCard from "../components/ui/ServiceCard";
 import Badge from "../components/ui/Badge";
