@@ -2,7 +2,7 @@ import Section from "../components/ui/Section";
 import Container from "../components/ui/Container";
 import Heading from "../components/ui/Heading";
 import Badge from "../components/ui/Badge";
-import ProjectCard from "../components/ui/ProjectCard";
+import PortfolioCard from "../components/ui/PortfolioCard";
 import portfolio from "../data/portfolio";
 
 function Proyectos() {
@@ -13,13 +13,13 @@ function Proyectos() {
           as="h1"
           badge={<Badge>Portafolio completo</Badge>}
           title="Nuestros proyectos."
-          description="Estos son los sitios que hemos diseñado para nuestros clientes. Cada uno se construye a la medida del negocio, su marca y sus objetivos."
+          description="Cada tarjeta es una puerta de entrada a un proyecto real. Explora el que te interese."
           align="center"
         />
 
-        <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <div className="mt-16 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-x-8 gap-y-12">
           {portfolio.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <PortfolioCard key={project.id} project={project} />
           ))}
         </div>
       </Container>

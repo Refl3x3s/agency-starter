@@ -32,7 +32,7 @@ function MiniHero({
       </div>
 
       {/* Hero */}
-      <div className="relative grid grid-cols-[0.9fr_1.1fr] items-center gap-8 px-6 py-8">
+      <div className="relative grid grid-cols-1 gap-6 px-6 py-8 sm:grid-cols-[0.9fr_1.1fr] sm:items-center sm:gap-8">
 
         {/* Texto */}
         <div>
@@ -60,7 +60,7 @@ function MiniHero({
   <img
     src={coffeeHero}
     alt="Vista previa de una página web de ejemplo para Café Aurora"
-    className="h-56 w-full rounded-2xl object-cover shadow-xl"
+    className="aspect-video w-full rounded-2xl object-cover shadow-xl sm:aspect-auto sm:h-56"
     width={1535}
     height={1024}
     loading="eager"

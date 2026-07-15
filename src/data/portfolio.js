@@ -1,7 +1,4 @@
-import coffeeHero from "../assets/images/portfolio/coffee-hero.jpg";
-import espresso from "../assets/images/portfolio/coffee-espresso.avif";
-import latte from "../assets/images/portfolio/coffee-latte.avif";
-import cheesecake from "../assets/images/portfolio/coffee-cheesecake.avif";
+import stepzHero from "../assets/images/portfolio/stepz-hero.jpg";
 import acrHero from "../assets/images/portfolio/acr-hero.jpg";
 import acrClases from "../assets/images/portfolio/acr-clases.jpg";
 import acrInstalaciones from "../assets/images/portfolio/acr-instalaciones.jpg";
@@ -9,29 +6,12 @@ import acrPlanes from "../assets/images/portfolio/acr-planes.jpg";
 
 const portfolio = [
   {
-    id: "cafe-aurora",
-    name: "Café Aurora",
-    heroImage: coffeeHero,
-    heroAlt: "Página web de Café Aurora",
-    heroWidth: 1535,
-    heroHeight: 1024,
-    description:
-      "Diseñamos una página moderna que muestra su menú, ubicación y permite reservar mesa en segundos, ayudándolos a atraer más clientes desde el primer día.",
-    highlights: [
-      { label: "Reservas online", value: "+40%" },
-      { label: "Tiempo de carga", value: "0.8s" },
-      { label: "Tiempo de entrega", value: "2 semanas" },
-    ],
-    gallery: [
-      { image: espresso, alt: "Espresso servido en Café Aurora", width: 500, height: 750 },
-      { image: latte, alt: "Latte art de Café Aurora", width: 500, height: 333 },
-      { image: cheesecake, alt: "Cheesecake artesanal de Café Aurora", width: 500, height: 443 },
-    ],
-  },
-  {
     id: "acr-sport-fitness",
     name: "ACR Sport & Fitness",
+    type: "Gimnasio",
     featured: true,
+    url: "https://acr-sport-fitness.netlify.app/",
+    tagline: "Sitio oscuro y cinematográfico para un gimnasio premium en Cajicá.",
     heroImage: acrHero,
     heroAlt: "Página web de ACR Sport & Fitness",
     heroWidth: 1280,
@@ -63,6 +43,25 @@ const portfolio = [
         height: 322,
       },
     ],
+  },
+  {
+    id: "stepz",
+    name: "STEP.Z",
+    type: "Gimnasio funcional",
+    url: "https://stepzgymdemo.netlify.app",
+    tagline: "Identidad azul y magenta para un gimnasio funcional en Tabio.",
+    heroImage: stepzHero,
+    heroAlt: "Página web de STEP.Z",
+    heroWidth: 1280,
+    heroHeight: 900,
+    description:
+      "Un gimnasio de entrenamiento funcional en Tabio que buscaba una marca con personalidad. Diseñamos un sitio oscuro con acentos en azul y magenta inspirados en su logo, planes de membresía y una galería de entrenamientos e instalaciones.",
+    highlights: [
+      { label: "Secciones a medida", value: "9" },
+      { label: "Paleta de marca", value: "Azul + magenta" },
+      { label: "Identidad visual", value: "100% a medida" },
+    ],
+    gallery: [],
   },
 ];
 
